@@ -2,19 +2,20 @@
 
 **Desktop Mass Messaging Automation Tool**
 
-AutoMessenger is a custom-built desktop application that streamlines the process of sending personalized text messages to multiple recipients using [Google Messages Web](https://messages.google.com/web/). Built with Python, Selenium, and Tkinter, this app automates browser interactions to deliver custom messages at scale. It is especially useful for shift coordination, outreach, or time-sensitive updates where speed, accuracy, and automation are essential.
+AutoMessenger is a custom-built desktop application that streamlines the process of sending personalized text messages to multiple recipients using Google Messages Web. Built with Python, Selenium, and Tkinter, this app automates browser interactions to deliver custom messages at scale. It is especially useful for shift coordination, outreach, or time-sensitive updates where speed, accuracy, and automation are essential.
 
 ---
 
 ## Features
 
-- Upload contacts directly from a CSV file (`Name` and `Phone` columns required)
-- Automatically formats phone numbers and filters invalid entries
-- Sends personalized messages via Google Messages Web
-- Customize location and time ranges through a user-friendly interface
-- Live message preview that updates based on input
-- Retry logic for message delivery failures
-- Confirmation dialogs and user prompts to guide the process
+- Upload contacts directly from a CSV file (requires `Name` and `Phone` columns)
+- Automatically formats phone numbers and filters out invalid entries
+- Customizable message preview with live updates
+- Location and time range inputs for dynamic message content
+- Message delivery automation using Google Messages Web
+- Retry logic for failed deliveries
+- Easy-to-use desktop interface
+- Secure: no data is uploaded or stored externally
 
 ---
 
@@ -22,18 +23,26 @@ AutoMessenger is a custom-built desktop application that streamlines the process
 
 The application includes:
 
-- A CSV file selector
-- A recipient preview window
-- Message settings for location and time
-- A message preview text box
-- A "Send Messages" button to initiate the process
+- CSV file selector for loading recipient contacts
+- Scrollable preview of contact names
+- Dropdowns for customizing location and time
+- Live-updating message preview box
+- "Send Messages" button to start automation
 
 ---
 
 ## Requirements
 
-- Python 3.8 or higher
-- Google Chrome or Firefox browser (Google Messages Web must be paired with your phone)
-- Selenium WebDriver (currently configured for Firefox via GeckoDriver)
+- **Python 3.8+**
+- **Selenium**
+- **Pandas**
+- **Tkinter** (included with most Python installations)
+- **Firefox Browser**
+- **GeckoDriver** (added to your system PATH)
 
-Install the required Python l
+> You can switch to Chrome by modifying the `webdriver.Firefox()` line in the code to use ChromeDriver instead.
+
+To install dependencies:
+
+```bash
+pip install -r requirements.txt
